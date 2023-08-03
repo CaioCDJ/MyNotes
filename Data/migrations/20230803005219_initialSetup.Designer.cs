@@ -8,10 +8,10 @@ using MyNotes.Data;
 
 #nullable disable
 
-namespace MyNotes.Migrations
+namespace MyNotes.Data.migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20230728010214_initialSetup")]
+    [Migration("20230803005219_initialSetup")]
     partial class initialSetup
     {
         /// <inheritdoc />

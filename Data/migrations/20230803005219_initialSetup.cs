@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace MyNotes.Migrations
+namespace MyNotes.Data.migrations
 {
     /// <inheritdoc />
     public partial class initialSetup : Migration

@@ -7,7 +7,7 @@ using MyNotes.Data;
 
 #nullable disable
 
-namespace MyNotes.Migrations
+namespace MyNotes.Data.migrations
 {
     [DbContext(typeof(DataContext))]
     partial class DataContextModelSnapshot : ModelSnapshot
