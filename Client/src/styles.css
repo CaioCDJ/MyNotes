@@ -2,3 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.center{
+  @apply items-center justify-center
+}
+
+.title{
+
+}
+
+.subTitle{
+  background: linear-gradient(to right, #00d4ff 0%, #090979 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+@apply text-xl font-semibold;
+}
+
+.textInput{
+  @apply w-full border-0 shadow-xl px-5 py-3 text-lg text-black bg-[#f6f6f6] max-w-[500px]
+}
