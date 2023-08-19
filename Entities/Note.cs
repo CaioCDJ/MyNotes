@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations;
+using System.Data.Common;
 
 namespace MyNotes.Entities;
 

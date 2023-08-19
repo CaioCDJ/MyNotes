@@ -4,32 +4,30 @@ namespace MyNotes.Endpoints.Notes.GetNotes;
 
 public class GetNotesEndpoint: EndpointWithoutRequest{
 
-  private DataContext _datacontext;
+  private UserServices _userServices;
+  private NotesServices _notesServices;
 
-  public GetNotesEndpoint(DataContext dataContext)
-    => _datacontext = dataContext;
-
-  public override void Configure(){
+  public GetNotesEndpoint(UserServices userServices, NotesServices notesServices){
+    _userServices  = userServices; 
+    _notesServices = notesServices;
+  }
+   public override void Configure(){
     Get("/api/user/{userId}/notes");
     AllowAnonymous();
+    Description(x=>x.WithTags("notes"));
   }
 
-  public override async Task HandleAsync(CancellationToken ct){
-    
-    string id = Route<string>("userId");
-    
-    if(id is null || string.IsNullOrEmpty(id))  await SendErrorsAsync();
-    
-    var user = await _datacontext.Users.FirstOrDefaultAsync(x=>x.Id == id);
+  public override async Task<IResult> HandleAsync(CancellationToken ct){
+   
+    bool check = await _userServices.verify(Route<string>("userId"));
+   
+    if(!check) return Results.NotFound("Usuario não encontrado!");
 
-    if(user is null) await SendNotFoundAsync(ct);
+    var notes = await _notesServices.getNotes(Route<string>("userId"));
 
-    var notes = _datacontext.Notes
-      .Where(x=>x.userId == user.Id)
-      .Select(x=>Mapper.toResonse(x));
-    
-    SendOkAsync(notes);
-
+    return (notes is not null) 
+      ? Results.Ok(notes.Select(x=>Mapper.toResonse(x)))
+      : Results.NotFound();
   }
 }
  

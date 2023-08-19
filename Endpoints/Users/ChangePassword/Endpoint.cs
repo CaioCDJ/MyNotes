@@ -38,8 +38,6 @@ public class ChangePasswordEndpoint: Endpoint<Request>{
     
     else 
       await SendErrorsAsync();
-
-    
   }
 }
  

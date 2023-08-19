@@ -31,8 +31,6 @@ public class DeleteUserEndpoint: EndpointWithoutRequest{
     }
     else
       await SendNotFoundAsync(ct);
-
-
   }
 }
  

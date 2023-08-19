@@ -2,6 +2,7 @@ global using Microsoft.EntityFrameworkCore;
 global using MyNotes.Data;
 global using FastEndpoints;
 global using FastEndpoints.Security;
+global using MyNotes.Services;
 using FastEndpoints.Swagger;
 
 
@@ -23,6 +24,8 @@ builder.Services.SwaggerDocument(x=>{
 builder.Services.AddDbContext<DataContext>(
   options => options.UseSqlite("DataSource=app.db;Cache=Shared")
 );
+builder.Services.AddTransient<UserServices>();
+builder.Services.AddTransient<NotesServices>();
 
 var app = builder.Build();
 
@@ -32,6 +35,7 @@ if (!app.Environment.IsDevelopment())
     // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
+
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
