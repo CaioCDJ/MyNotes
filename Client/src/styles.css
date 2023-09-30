@@ -1,28 +1,79 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "primeng/resources/themes/lara-light-blue/theme.css";
+@import "primeng/resources/primeng.css";
+@import "primeicons/primeicons.css";
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css");
 
-*{
+/* -- colors --*/
+:root {
+  --bg: #e2e2e2;
+  --txt: #2e3846;
+  --danger: #f87272;
+  --success: #36d399;
+  --primary: #1557d7;
+  --accent: #3965be;
+}
+
+* {
   margin: 0;
   padding: 0;
+  color: var(--txt);
+}
+body {
+  background: var(--bg);
 }
 
-.center{
-  @apply items-center justify-center
-}
-
-.title{
-
-}
-
-.subTitle{
-  background: linear-gradient(to right, #00d4ff 0%, #090979 100%);
+.title {
+  background: -webkit-linear-gradient(var(--primary), #00e3a1);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  display: inline-block;
-@apply text-xl font-semibold;
+  font-size: 6rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+  word-wrap: break-word;
 }
 
-.textInput{
-  @apply w-full border-0 shadow-xl px-5 py-3 text-lg text-black bg-[#f6f6f6] max-w-[500px]
+.subtitle {
+  color: var(--primary);
+  font-size: 4rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  word-wrap: break-word;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-col {
+  flex-flow: column;
+}
+.flex-row {
+  flex-flow: row;
+}
+
+.h-full {
+  height: 100vh;
+}
+
+.w-full {
+  width: 100%;
+}
+
+section {
+  padding-left: 20px;
+  padding-right: 20px;
+  max-width: 1200px;
+  border-radius: 15px;
+}
+
+main {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.btnSend {
 }

@@ -1,0 +1,72 @@
+main {
+  gap: 20px;
+}
+
+#hero {
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+#hero div {
+  width: 60%;
+}
+
+#hero div > div {
+  font-size: 1.7rem;
+  width: 100%;
+}
+
+hr {
+  width: 100%;
+  height: 1px;
+  color: var(--txt);
+}
+
+#info {
+}
+
+#info h2 {
+  align-self: flex-start;
+  font-size: 3rem;
+  margin-left: 10px;
+}
+
+#info > div {
+  width: 50%;
+}
+
+#info > div > div {
+  /* width: 90%; */
+  font-size: 1.3rem;
+  line-height: normal;
+  text-indent: 10%;
+  /* text-align: justify; */
+}
+
+.grd {
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  column-gap: 30px;
+}
+
+.grd div {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  min-width: 400px;
+  height: 50px;
+  font-size: 1.4rem;
+  font-weight: 600;
+  align-items: center;
+  color: #444;
+}
+
+.grd div i {
+  color: var(--success);
+  font-weight: 700;
+}

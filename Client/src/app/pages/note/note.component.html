@@ -1,11 +1,37 @@
-<app-navbar />
+<!-- <app-navbar /> -->
 
-<aside>
+<aside></aside>
 
-</aside>
-
-<main>
-
+<main class="w-full flex flex-col min-h-screen px-1 mt-23">
+  <div class="navbar bg-base-100 h-[80px]">
+    <div class="flex-1">
+      <a class="btn btn-ghost normal-case text-xl">Titulo </a> : 2023-08-19
+    </div>
+    <div class="flex-none gap-2">
+      <ul class="menu menu-horizontal bg-base-200 rounded-box">
+        <li>
+          <a>
+            <i class="bi bi-save"></i>
+          </a>
+        </li>
+        <li>
+          <a>
+            <i class="bi bi-trash"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div [formGroup]="templateForm" novalidate
+    class="flex flex-row justify-center h-full min-h-[700px] w-full rounded px-3">
+    <form [formGroup]="templateForm" novalidate class="w-1/2 h-[84vh] bg-red-800">
+      <angular-markdown-editor textareaId="editor1" [options]="editorOptions" formControlName="body">
+      </angular-markdown-editor>
+    </form>
+    <div class="w-1/2 h-[84vh] bg-cyan-500 p-3">
+      <markdown [data]="markdownText"></markdown>
+    </div>
+  </div>
 </main>
 
-<app-footer />
+<!-- <app-footer /> -->

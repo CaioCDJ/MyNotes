@@ -1,0 +1,48 @@
+main > * {
+  height: 100%;
+}
+
+.img {
+  width: 60%;
+  background-image: url("https://images.unsplash.com/photo-1517842645767-c639042777db?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80");
+  background-size: cover;
+  background-position: center;
+}
+
+form {
+  width: 40%;
+  padding-left: 20px;
+  padding-right: 20px;
+  gap: 10px;
+}
+form .mb-3 {
+  width: 90%;
+}
+
+form > .input {
+  border: 0;
+  height: 30px;
+  width: 90%;
+  border-radius: 5px;
+  padding-right: 5px;
+  padding-left: 5px;
+  font-size: 1.2rem;
+}
+
+.btnSend {
+  width: 90%;
+  border-radius: 5px;
+  border: 0;
+  padding: 5px;
+  background: var(--success);
+  color: #f5f5f5;
+  font-size: 1.2rem;
+  font-weigth: 700;
+  margin-top: 5px;
+}
+
+form div {
+}
+.signup a {
+  color: var(--primary);
+}

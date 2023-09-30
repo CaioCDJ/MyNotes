@@ -1,4 +1,4 @@
-<main class="flex center flex-col md:flex-row h-screen">
+<!---<main class="flex center flex-col md:flex-row h-screen">
 
   <div class="w-3/5 md:flex hidden bg-primary h-full bg-fixed bg-cover center"
     style="background-image: url('https://images.unsplash.com/photo-1517842645767-c639042777db?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80');">
@@ -15,5 +15,40 @@
       Já tem uma conta ? <a class="link link-accent">Faça o Login</a>
     </div>
   </form>
+</main>
+ -->
 
+<main class="center h-full w-full flex-row">
+  <div class="img"></div>
+  <form class="center flex-col" [method]="">
+    <h3 class="title">Cadastro</h3>
+
+    <div class="mb-3">
+      <input type="text" class="form-control" required placeholder="Nome:" />
+    </div>
+
+    <div class="mb-3">
+      <input type="email" class="form-control" required placeholder="Email:" />
+    </div>
+
+    <div class="input-group mb-3">
+      <input type="password" class="form-control" placeholder="Senha:" aria-label="Recipient's username"
+        aria-describedby="button-addon2" />
+      <button class="btn btn-outline-secondary" type="button" id="button-addon2">
+        show
+      </button>
+    </div>
+
+    <div class="input-group mb-3">
+      <input type="password" class="form-control" placeholder="Confirmar Senha: " aria-label="Recipient's username"
+        aria-describedby="button-addon2" />
+      <button class="btn btn-outline-secondary" type="button" id="button-addon2">
+        show
+      </button>
+    </div>
+    <input class="btnSend" type="submit" value="Confirmar" />
+    <div class="signup">
+      Já tem uma Conta? <a href="www.google.com">Login</a>
+    </div>
+  </form>
 </main>

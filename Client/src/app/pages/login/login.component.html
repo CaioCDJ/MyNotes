@@ -1,3 +1,4 @@
+<!--
 <main class="flex center flex-col md:flex-row h-screen">
 
   <div class="w-3/5 md:flex hidden bg-primary h-full bg-fixed bg-cover center"
@@ -11,6 +12,30 @@
     <input type="submit" class="btn btn-block btn-success max-w-[500px]" value="Confirmar">
     <div class="text-lg font-semibold">
       Não tem uma conta ? <a class="link link-accent">Se cadastre</a>
+    </div>
+  </form>
+</main>
+-->
+
+<main class="center h-full w-full flex-row">
+  <div class="img"></div>
+  <form class="center flex-col" [method]="">
+    <h3 class="title">Login</h3>
+
+    <div class="mb-3">
+      <input type="email" class="form-control" required placeholder="Email:" />
+    </div>
+
+    <div class="input-group mb-3">
+      <input type="password" class="form-control" placeholder="Senha" aria-label="Recipient's username"
+        aria-describedby="button-addon2" />
+      <button class="btn btn-outline-secondary" type="button" id="button-addon2">
+        show
+      </button>
+    </div>
+    <input class="btnSend" type="submit" value="Confirmar" />
+    <div class="signup">
+      Não tem uma Conta? <a href="www.google.com">Se cadastre</a>
     </div>
   </form>
 </main>

@@ -17,7 +17,7 @@ public class ChangePasswordEndpoint: Endpoint<Request>{
 
   public override async Task HandleAsync(Request request,CancellationToken ct){
     
-    string id = Route<string>("id");
+    string? id = Route<string>("id");
     
     if(id is null || string.IsNullOrEmpty(id))  await SendErrorsAsync();
     
